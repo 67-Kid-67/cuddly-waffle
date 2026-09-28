@@ -16,12 +16,63 @@
     <script type="module" crossorigin src="/assets/controllers-DoMZqhdH.js"></script>
     <script type="module" crossorigin src="/assets/main-Ujn3KlNv.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/main-DyMbeQU4.css">
+    
+    <style>
+      /* Re-brand titles globally */
+      title, h1, h2, .title, .logo-text { content: 'Rocket League 2' !important; }
+      
+      /* Erase ads, original creator attributes, and store buttons */
+      a[href*='xthomasms'], a[href*='://google.com'], img[src*='google-play'], .google-play-btn, iframe, [class*='ad'], [id*='ad'], .ads-container, #loading-text, #loading-status { 
+        display: none !important; 
+        opacity: 0 !important; 
+        visibility: hidden !important; 
+        pointer-events: none !important; 
+      }
+      
+      /* Dark Loading Screen Overlay */
+      body::before { 
+        content: '🚀 ROCKET LEAGUE 2 \n Loading Arena Assets...'; 
+        position: fixed; 
+        top: 0; 
+        left: 0; 
+        width: 100vw; 
+        height: 100vh; 
+        background: #0b1426; 
+        color: #ffffff; 
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+        font-size: 26px; 
+        font-weight: bold; 
+        text-align: center; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        white-space: pre-wrap; 
+        z-index: 999999; 
+        animation: hideSplash 5s forwards; 
+      }
+
+      /* Fixed Jenz Footer Credit */
+      body::after {
+        content: "Made by jenz";
+        position: fixed;
+        bottom: 12px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: 'Segoe UI', sans-serif;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.7);
+        z-index: 99999;
+        pointer-events: none;
+      }
+      
+      @keyframes hideSplash { 
+        0% { opacity: 1; visibility: visible; } 
+        92% { opacity: 1; visibility: visible; } 
+        100% { opacity: 0; visibility: hidden; pointer-events: none; } 
+      }
+    </style>
   </head>
   <body>
     <div id="app"></div>
   </body>
 </html>
-
-<style>a[href*='play.google.com'], img[src*='google-play'], .google-play-btn { display: none !important; }</style>
-
-<style>a[href*='xthomasms'] { display: none !important; }</style>
